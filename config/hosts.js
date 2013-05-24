@@ -54,12 +54,14 @@ module.exports =
 			enabled: true,
 			alert_to: ['ivan@iloire.com'],
 			warning_if_takes_more_than: 1500, //miliseconds
+			owner: 'chengbo1983@gmail.com',
 			services : [
 				{
 					name: 'home',
 					method: 'get',
 					url : '/',
-					expected: {statuscode: 200, contains: 'noticias'}
+					expected: {statuscode: 200, contains: 'noticias'},
+					owner: 'roy@chengbo.net'
 				},
 				{
 					name: 'contact page',

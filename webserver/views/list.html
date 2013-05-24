@@ -5,6 +5,7 @@
 		<th width="40"></th>
 		<th width="80">Ping type</th>
 		<th>Service</th>
+		<th>Owner</th>
 		<th width="80"><span title="Average response time (milliseconds)">AVG res.</span></th>
 		<th width="70">outages</th>
 		<th width="14%">last outage</th>
@@ -46,6 +47,14 @@
 				{{dateFormat data.last_check format="MMM Do, h:mm:ss"}}
 				<time datetime='{{dateFormat data.last_check format="MMMM Do, h:mm:ss"}}'>{{dateFormat data.last_check ago=true}}</time>
 			</span>
+			{{/if}}
+		</td>
+
+		<td>
+			{{#if owner}}
+				<a href="mailto:{{owner}}">{{owner}}</a>
+			{{else}}
+				N/A
 			{{/if}}
 		</td>
 
