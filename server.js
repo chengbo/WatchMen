@@ -1,11 +1,10 @@
 var config = require('./config/general');
 var email_service = require ('./lib/notifications/email/email');
 var storage_factory = require ('./lib/storage/storage_factory');
-var services = require ('./lib/services').load_services();
 
 var WatchMen = require ('./lib/watchmen');
 var storage = storage_factory.get_storage_instance();
-var watchmen = new WatchMen(services, storage);
+var watchmen = new WatchMen(storage);
 
 //----------------------------------------------------
 // Subscribe to service events
